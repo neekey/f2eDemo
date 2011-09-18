@@ -1,0 +1,251 @@
+/**
+ * @description
+ *	美妆市场首页 - 分类样式
+ * @author: 倪云建 <niyunjian.pt@taobao.com>
+ */
+
+/* 分类容器 */
+.beauty-category {
+	width: 236px;
+	height: 396px;
+	background: white;
+	font-size: 12px;
+	border: 2px solid #c36da4;
+}
+.beauty-category .category-list {
+}
+/* 每个菜单项 */
+.beauty-category .category-list-item {
+	height: 57px;
+	width: 236px;
+	
+	margin-top: -2px;
+	text-align: left;
+
+	border: 1px solid #c36da4;
+	border-top-color: white;
+	border-bottom-color: white;
+	border-left: none;
+	border-right: none;
+
+	font-size: 0px;
+	z-index: 10003;
+	background: white;
+}
+.beauty-category .category-list-item.first-item {
+	border-top: 2px solid #c36da4;
+	height: 56px;
+}
+/* 菜单项中的wrap，绝对定位，用于遮挡右边的边框 */
+.beauty-category .category-item-wrap {
+	padding: 0 12px 0 12px;
+	width: 212px;
+	height: 55px;
+	overflow: hidden;
+}
+.beauty-category .last-item .category-item-wrap {
+	height: 54px;
+	_height: 56px;
+}
+.beauty-category .first-item .category-item-wrap{
+	height: 55px;
+	_height: 54px;
+}
+.beauty-category .category-item-active div.category-item-wrap {
+	border-right:2px solid #F6F6F6;
+	position: absolute;
+	z-index: 7;
+}
+
+/* 菜单项中的内容容器，用于产生非hover状态下的底边 */
+.beauty-category .category-item {
+	border-top: 1px solid #F3F3F3;
+	border-bottom: 1px solid #F3F3F3;
+	height: 55px;
+	overflow: hidden;
+}
+.beauty-category .first-item .category-item {
+	border-top: none;
+	height: 55px;
+}
+.beauty-category .category-item-active .category-item {
+	border: none;
+}
+/* hover 状态的菜单项 */
+.beauty-category .category-item-active {
+	border-top: 2px solid #c36da4;
+	border-bottom: 2px solid #c36da4;
+	height: 55px;
+	position: relative;
+	background: #F6F6F6;
+}
+.beauty-category .category-item-active.first-item  {
+	height: 55px;
+	_height: 54px;
+}
+/* 最后一个菜单项，无底边 */
+.beauty-category .last-item  {
+	border-bottom: none;
+	height: 55px;
+}
+/* 最后一个菜单项，激活状态 */
+.beauty-category .category-item-active.last-item  {
+	border-bottom: none;
+	height: 54px;
+	_height: 54px;
+}
+
+
+
+/**
+ * 展开的菜单样式 
+ */
+
+/* 展开菜单容器，相对分类总容器进行绝对定位 */
+.beauty-category .category-item-detail {
+	position: absolute;
+	top: -2px;
+	left: 236px;
+	padding: 0 16px 0 16px;
+	width: 406px;
+	border: 2px #c36da4 solid;
+	overflow: hidden;
+	background: #F6F6F6;
+	font-size: 12px;
+	display: none;
+	z-index: 6;
+}
+.beauty-category .category-item-active .category-item-detail {
+	display: block;
+}
+
+/**
+ * 菜单项具体样式
+ */
+.beauty-category .category-item h4 {
+	font-size: 14px;
+	background-position: 200px -486px;
+	margin-bottom: 8px;
+	line-height: 14px;
+	margin-top: 10px;
+}
+.beauty-category .category-item h4 a {
+	color: #333;
+}
+.beauty-category .category-item p {
+	margin-bottom: 4px;
+	height: 14px;
+	line-height: 14px;
+	overflow: hidden;
+	font-size: 12px;
+}
+.beauty-category .category-item p span {
+	padding-right: 2px;
+	white-space: nowrap;
+}
+.beauty-category .category-item p span a {
+	color: #666666;
+}
+
+/**
+ * 展开的菜单内部具体样式
+ */
+.beauty-category .detail-category, 
+.beauty-category .detail-top,
+.beauty-category .detail-brand {
+	padding: 15px 0 10px 0;
+	/* IE6-7 */
+	*padding-bottom: 20px;
+	border-bottom: 1px dashed #c9c9c9;
+	width: 406px;
+}
+.beauty-category .detail-top {
+	padding-top: 20px;
+}
+.beauty-category .detail-category h4, 
+.beauty-category .detail-top h4,
+.beauty-category .detail-brand h4{
+	float: left;
+	width: 75px;
+}
+.beauty-category .detail-category p, 
+.beauty-category .detail-top p,
+.beauty-category .detail-brand ul {
+	float: right;
+	width: 329px;
+}
+.beauty-category .detail-category span, 
+.beauty-category .detail-top span {
+	float: left;
+	margin-bottom: 10px;
+	color: #e0dfdf;
+	padding-right: 5px;
+	height: 12px;
+}
+.beauty-category .detail-category span a, 
+.beauty-category .detail-top span a {
+	padding-right: 5px;
+	color: #666666;
+	/* 解决ie6-7 下 换行 */
+	white-space: nowrap;
+}
+.beauty-category .detail-brand ul li {
+	float: left;
+	width: 68px;
+	border: 1px solid #dfdfdf;
+	height: 28px;
+	margin: 0 9px 9px 0;
+	overflow: hidden;
+	background: white;
+}
+.beauty-category .detail-pavilion {
+	padding: 12px 0 9px 0;
+	display: none;
+}
+.beauty-category .category-item-detail .detail-pavilion {
+	display: block;
+}
+.beauty-category .detail-pavilion li {
+	float: left;
+	width: 70px;
+	height: 50px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+.beauty-category .detail-pavilion li a {
+	display: block;
+	width: 70px;
+	height: 50px;
+}
+/* 各馆的图片和hover图片设置 */
+.beauty-category a.pavilion-zhiwu {
+	background-position: -1px -214px;
+}
+.beauty-category a.pavilion-zhiwu:hover {
+	background-position: -72px -214px;
+}
+.beauty-category a.pavilion-guohuo {
+	background-position: -1px -316px;
+}
+.beauty-category a.pavilion-guohuo:hover {
+	background-position: -72px -316px;
+}
+.beauty-category a.pavilion-huaxiang{
+	background-position:  -1px -265px;
+}
+.beauty-category a.pavilion-huaxiang:hover {
+	background-position: -72px -265px;
+}
+.beauty-category a.pavilion-meifa {
+	background-position: -1px -163px;
+}
+.beauty-category a.pavilion-meifa:hover {
+	background-position: -72px -163px;
+}
+.beauty-category a.pavilion-nanshi {
+	background-position: -1px -112px;
+}
+.beauty-category a.pavilion-nanshi:hover {
+	background-position: -72px -112px;
+}
